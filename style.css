@@ -1,0 +1,340 @@
+/* =====================================================
+   GENERAL
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    min-height: 60px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.nav-link {
+    margin-right: 10px;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   CAROUSEL
+===================================================== */
+
+.carousel-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    bottom: 25%;
+}
+
+.carousel-caption h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+.main-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   SECTION 1 - FLEX
+===================================================== */
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    width: 300px;
+    text-align: center;
+}
+
+.flex-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.flex-item p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   SECTION 2 - GALLERY
+===================================================== */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 300px);
+
+    gap: 10px;
+
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 200px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   SECTION 3 - CARDS
+===================================================== */
+
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+}
+
+.custom-card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.custom-card .card-body {
+    padding: 20px;
+}
+
+.custom-card .card-title {
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background-color: #212529;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer h5 {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #dddddd;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #dddddd;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   TABLET RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .carousel-image {
+        height: 400px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 300px);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .main-section {
+        padding: 40px 15px;
+    }
+
+
+    /* Carousel */
+
+    .carousel-image {
+        height: 320px;
+    }
+
+    .carousel-caption {
+        bottom: 15%;
+    }
+
+    .carousel-caption h2 {
+        font-size: 22px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+    }
+
+
+    /* Flex */
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-item {
+        width: 300px;
+    }
+
+
+    /* Gallery */
+
+    .gallery-grid {
+        grid-template-columns: 300px;
+    }
+
+    .gallery-item {
+        width: 300px;
+        height: 200px;
+    }
+
+
+    /* Cards */
+
+    .custom-card {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+
+    /* Footer */
+
+    .footer .row > div {
+        margin-bottom: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 350px) {
+
+    .flex-item {
+        width: 100%;
+    }
+
+    .flex-item img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .custom-card {
+        width: 100%;
+    }
+
+    .custom-card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+    }
+
+}
